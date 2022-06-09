@@ -62,7 +62,7 @@ return [
 ];
 ```
 ### 预览效果
-![https://raw.githubusercontent.com/xaboy/form-builder/2.0/images/components.png](https://raw.githubusercontent.com/xaboy/form-builder/master/images/components.png)
+![https://raw.githubusercontent.com/saithink/wiki/main/images/public.png](https://raw.githubusercontent.com/saithink/wiki/main/images/public.png)
 
 ### 控制器代码 
 ```php
@@ -101,4 +101,4 @@ class Index
 ```
 
 ### 预览效果
-![https://raw.githubusercontent.com/xaboy/form-builder/2.0/images/components.png](https://raw.githubusercontent.com/xaboy/form-builder/master/images/components.png)
+![https://raw.githubusercontent.com/saithink/wiki/main/images/control.png](https://raw.githubusercontent.com/saithink/wiki/main/images/control.png)
