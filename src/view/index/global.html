@@ -1,0 +1,68 @@
+<?php foreach($public['api'] as $vvv): ?>
+<div id="wiki-<?=$public['group']?>-<?=$public['name']?>-<?=$vvv['title']?>" class="hide frame-list">
+    <div class="title"><?=$vvv['title']?></div>
+
+    <div class="label-title">描述：</div>
+    <div class="info"><?=$vvv['description']?></div>
+
+    <div class="label-title">URL：</div>
+    <div class="info"><button class="btn btn-min"><?=$vvv['method']?></button> /<?=$vvv['rule']?></div>
+
+    <div class="label-title">请求参数：</div>
+    <div class="info">
+        <div class="table-box">
+            <table class="table" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>参数</th>
+                        <th>名称</th>
+                        <th>类型</th>
+                        <th>必须</th>
+                        <th>示例</th>
+                        <th>说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($vvv['mock']['request'] as $f): ?>
+                    <tr>
+                        <td><?=$f["name"]?></td>
+                        <td><?=$f["title"]?></td>
+                        <td><?=$f["type"]?></td>
+                        <td><?=$f['require'] ? "√" : ""?></td>
+                        <td><?=$f["example"]?></td>
+                        <td><?=$f["description"]?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="label-title">返回参数：</div>
+    <div class="info">
+        <div class="table-box">
+            <table class="table" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>参数</th>
+                        <th>名称</th>
+                        <th>类型</th>
+                        <th>示例</th>
+                        <th>说明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach($vvv['mock']['response'] as $f): ?>
+                    <tr>
+                        <td><?=$f["name"]?></td>
+                        <td><?=$f["title"]?></td>
+                        <td><?=$f["type"]?></td>
+                        <td><?=$f["example"]?></td>
+                        <td><?=$f["description"]?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<?php endforeach; ?>
