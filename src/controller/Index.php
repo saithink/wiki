@@ -44,16 +44,19 @@ class Index
 
     public function index()
     {
-        AnnotationRegistry::registerLoader('class_exists');
         $app = config('wiki.scan_app') ?? 'index';
+        $app = request()->get('app') ?? $app;
+        AnnotationRegistry::registerLoader('class_exists');
         $dir = $this->app->getRootPath() . 'app' . DIRECTORY_SEPARATOR . $app . DIRECTORY_SEPARATOR . 'controller' . DIRECTORY_SEPARATOR;
+        if (!is_dir($dir)) {
+            return '请检查应用['.$app.']是否存在';
+        }
 
         $this->scanDir($dir);
         $result = [];
         foreach ($this->wikiList as $key => $info) {
             $result[$info['group']][] = $info;
         }
-
         $viewPath = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR;
         View::config(['view_path' => $viewPath]);
         View::assign('public', config('wiki.public'));

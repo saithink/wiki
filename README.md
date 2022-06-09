@@ -22,6 +22,10 @@ $ composer require saithink/wiki
 git clone https://github.com/saithink/wiki.git
 ```
 ## 使用方式
+#### 默认访问路径是config里面的scan_app配置应用名称
+http://xxx.com/wiki/docs
+#### 可以自定义扫描应用名称,例如我们要扫描admin应用
+http://xxx.com/wiki/docs?app=admin
 ### 自定义接口
 在config目录下包含一个wiki.php,这个文件是项目的配置文件,可以在api数组里面增加额外的接口
 ```php
