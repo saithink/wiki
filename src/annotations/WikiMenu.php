@@ -1,5 +1,5 @@
 <?php
-namespace saithink\wiki\annotations;
+namespace sai\wiki\annotations;
 
 /**
  * 接口菜单注释路由

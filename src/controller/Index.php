@@ -1,15 +1,15 @@
 <?php
-namespace saithink\wiki\controller;
+namespace sai\wiki\controller;
 
 use ReflectionClass;
 use think\App;
 use think\facade\View;
 use Doctrine\Common\Annotations\AnnotationReader;
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use saithink\wiki\annotations\WikiItem;
-use saithink\wiki\annotations\WikiMenu;
-use saithink\wiki\annotations\WikiRequest;
-use saithink\wiki\annotations\WikiResponse;
+use sai\wiki\annotations\WikiItem;
+use sai\wiki\annotations\WikiMenu;
+use sai\wiki\annotations\WikiRequest;
+use sai\wiki\annotations\WikiResponse;
 use Symfony\Component\ClassLoader\ClassMapGenerator;
 
 class Index
