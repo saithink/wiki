@@ -1,5 +1,5 @@
 {
-    "name": "sai/wiki",
+    "name": "saithink/wiki",
     "description": "api document",
     "type": "plugin",
     "require": {
