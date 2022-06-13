@@ -72,7 +72,7 @@ return [
 ```php
 <?php
 /* 注释路由 */
-use saithink\wiki\annotations\{WikiMenu,WikiItem,WikiRequest,WikiResponse};
+use sai\wiki\annotations\{WikiMenu,WikiItem,WikiRequest,WikiResponse};
 
 /**
  * @WikiMenu("首页", group="应用接口", description="数据展示相关接口")
